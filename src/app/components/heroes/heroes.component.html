@@ -1,0 +1,20 @@
+<h1 class="container text-center">Heroes de Marvel & DC</h1>
+<hr>
+
+<div class="col" *ngFor="let heroe of heroes; let i = index">
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="heroe.img" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-text">{{heroe.nombre}}</h5>
+          <p class="card-text"> {{heroe.bio}}</p>
+          <p class="card-text">{{heroe.aparicion}}</p>
+          <button (click)="verHeroe(i)" type="button" class="btn btn-primary">Ver más...</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
